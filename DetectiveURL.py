@@ -25,6 +25,13 @@ while True:
         print('=================================================')
         print('')
 
+import keyboard  # using module keyboard
+while True:  # making a loop
+    try:  # used try so that if user pressed other than the given key error will not be shown
+        if keyboard.is_pressed('ctrl+c'):  # if key 'q' is pressed 
+            print('You Pressed A Key!')
+            break  # finishing the loop
+
         wrd_lst=open(wdl_directory, "r")
         read_lines=wrd_lst.readlines()
         for line in read_lines:
